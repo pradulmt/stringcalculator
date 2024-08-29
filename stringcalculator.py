@@ -24,20 +24,3 @@ def add(numbers_str):
          raise ValueError("negative numbers not allowed {}".format(",".join(negative_numbers)))
 
     return sum_of_numbers
-
-
-
-print(add(""))
-
-print(add("1"))
-
-
-print(add("1,5"))
-
-print(add("1\n2,3"))
-
-print(add("//;\n1;2"))
-
-# print(add("1,-5"))
-
-print(add("1,-5,-3,-4"))

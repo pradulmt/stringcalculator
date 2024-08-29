@@ -1,3 +1,6 @@
+import pytest
+
+
 from stringcalculator import add
 
 
@@ -22,3 +25,11 @@ class TestCalculator:
 
     def test_different_delimiters2(self):
         assert add("//#\n7#7#7") == 21
+
+    def test_negative_number(self):
+        with pytest.raises(ValueError):
+            add("-1")
+
+    def test_negative_numbers(self):
+        with pytest.raises(ValueError):
+            add("-5,-7,-8")
