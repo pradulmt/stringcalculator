@@ -3,7 +3,7 @@ import re
 def add(numbers_str):
     delimiter = ',|\n'
     if numbers_str.startswith("//"):
-        delimiter_part, numbers_str = numbers_str.split("\n")
+        delimiter_part, numbers_str = numbers_str.split("\n", 1)
         delimiter = delimiter_part[2:3]
 
     lst = re.split(delimiter, numbers_str)
