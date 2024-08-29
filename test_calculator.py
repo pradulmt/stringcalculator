@@ -10,3 +10,9 @@ class TestCalculator:
 
     def test_length2(self):
         assert add("1,5") == 6
+
+    def test_long_string(self):
+        assert add("1,2,3,4,5,6,7,8,9,10") == 55
+
+    def test_newline_split(self):
+        assert add("1\n2,3") == 6
